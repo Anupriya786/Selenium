@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Search Google example.
  *
- * @author Rahul
+ * @author Anupriya
  */
 public class GoogleSearch {
     static WebDriver driver;
