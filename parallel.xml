@@ -3,8 +3,8 @@
 <suite name="LeafTaps">
   <test thread-count="5" name="Leads">
     <classes>
-      <class name="ProjectDay.CreateContactSeMethods"/>
-      <class name="ProjectDay.Flipkart"/>
+      <class name="ProjectDay.CreateContactSeMethods"/> 
+      <class name="ProjectDay.Flipkart"/> 
     </classes>
   </test> <!-- Leads -->
 </suite> <!-- LeafTaps -->

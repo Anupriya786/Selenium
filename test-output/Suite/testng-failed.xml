@@ -10,7 +10,7 @@
         <methods>
           <include name="setValues"/>
           <include name="login"/>
-          <include name="createnewLead" invocation-numbers="0 1"/>
+          <include name="createnewLead" invocation-numbers="0"/>
           <include name="closeApp"/>
           <include name="startSuite"/>
           <include name="stopSuite"/>

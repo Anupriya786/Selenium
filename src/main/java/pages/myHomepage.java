@@ -19,7 +19,8 @@ public class myHomepage extends Annotations {
 	
 	
 	public myLeadpage clickLeads() {
-		WebElement eleLeads = locateElement("linktext", prop.getProperty("myHomepage.leads.link"));
+		String property = prop.getProperty("myHomepage.leads.link");
+		WebElement eleLeads = locateElement("linktext",property );
 		click(eleLeads);
 		return new myLeadpage();
 	}

@@ -8,11 +8,6 @@
           <include name="CreateContact"/>
         </methods>
       </class> <!-- ProjectDay.Flipkart -->
-      <class name="ProjectDay.CreateContactSeMethods">
-        <methods>
-          <include name="createContact"/>
-        </methods>
-      </class> <!-- ProjectDay.CreateContactSeMethods -->
     </classes>
   </test> <!-- Leads(failed) -->
 </suite> <!-- Failed suite [LeafTaps] -->

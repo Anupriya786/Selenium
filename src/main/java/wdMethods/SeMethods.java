@@ -34,7 +34,7 @@ public class SeMethods extends Reporter implements WdMethods{
 	 //Actions builder = new Actions(driver);
 
 	public void loadObject() throws FileNotFoundException, IOException {
-		Properties prop = new Properties();
+		 prop = new Properties();
 		prop.load(new FileInputStream("./src/main/resources/object.properties"));
 	}
 	
@@ -52,12 +52,12 @@ public class SeMethods extends Reporter implements WdMethods{
 			driver.manage().window().maximize();
 			driver.get(url);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			//System.out.println("The Browser " + browser + " is Launched Successfully");
-			reportStep("The Browser " + browser + " is Launched Successfully","pass");
+			  System.out.println("The Browser " + browser + " is Launched Successfully");
+			//reportStep("The Browser " + browser + " is Launched Successfully","pass");
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
-			//System.out.println("WebDriver Exception has Occurred");
-			reportStep("WebDriver Exception has Occurred","fail");
+			System.out.println("WebDriver Exception has Occurred");
+			//reportStep("WebDriver Exception has Occurred","fail");
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -112,17 +112,17 @@ public class SeMethods extends Reporter implements WdMethods{
 	public void type(WebElement ele, String data) throws NullPointerException {
 		try {
 			ele.sendKeys(data);
-			//System.out.println("The Data " + data + " is Entered Successfully");
-			reportStep("The Data " + data + " is Entered Successfully","pass");
+			System.out.println("The Data " + data + " is Entered Successfully");
+			//reportStep("The Data " + data + " is Entered Successfully","pass");
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
-			//System.out.println("WebDriver Exception has Occurred");
-			reportStep("WebDriver Exception has Occurred","fail");
+			 System.out.println("WebDriver Exception has Occurred");
+			//reportStep("WebDriver Exception has Occurred","fail");
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
-			//System.out.println("Exception has Occurred");
-			reportStep("Exception has Occurred","fail");
+			 System.out.println("Exception has Occurred");
+			//reportStep("Exception has Occurred","fail");
 			throw new RuntimeException();
 		}
 		finally {
@@ -133,7 +133,7 @@ public class SeMethods extends Reporter implements WdMethods{
 	public void click(WebElement ele) {
 		try {
 			ele.click();
-			System.out.println("The Element " + ele + " is clicked Successfully");
+		    System.out.println("The Element " + ele + " is clicked Successfully");
 			//reportStep("The Element " + ele + " is clicked Successfully","pass");
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
@@ -158,18 +158,18 @@ public class SeMethods extends Reporter implements WdMethods{
 		String text = null;
 		try {
 			text = ele.getText();
-			//System.out.println("The Entered Text is " + text);
-			reportStep("The Entered Text is ","pass");
+			System.out.println("The Entered Text is " + text);
+			//reportStep("The Entered Text is ","pass");
 			
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
-			//System.out.println("WebDriver Exception has Occurred");
-			reportStep("WebDriver Exception has Occurred","fail");
+			 System.out.println("WebDriver Exception has Occurred");
+			//reportStep("WebDriver Exception has Occurred","fail");
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
-			//System.out.println("Exception has Occurred");
-			reportStep("WebDriver Exception has Occurred","fail");
+			 System.out.println("Exception has Occurred");
+			//reportStep("WebDriver Exception has Occurred","fail");
 			throw new RuntimeException();
 			
 		}
@@ -181,10 +181,11 @@ public class SeMethods extends Reporter implements WdMethods{
 		// TODO Auto-generated method stub
 		try {
 			 text = ele.getAttribute(data);
-			//System.out.println("The text is "+text);
-			reportStep("The text is "+text,"pass");
+			 System.out.println("The text is "+text);
+			//reportStep("The text is "+text,"pass");
 		} catch (Exception e) {
-			reportStep("WebDriver Exception has Occurred","fail");
+			 System.out.println("WebDriver Exception has Occurred");
+			 //reportStep("WebDriver Exception has Occurred","fail");
 		}
 		finally
 		{
@@ -198,17 +199,17 @@ public class SeMethods extends Reporter implements WdMethods{
 		try {
 			Select dd = new Select(ele);
 			dd.selectByVisibleText(value);
-			//System.out.println("The value Slected in the Element is " + value);
-			reportStep("The value Slected in the Element is " + value,"pass");
+			System.out.println("The value Slected in the Element is " + value);
+			//reportStep("The value Slected in the Element is " + value,"pass");
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
-			//System.out.println("WebDriver Exception has Occurred");
-			reportStep("WebDriver Exception has Occurred","fail");
+			 System.out.println("WebDriver Exception has Occurred");
+			//reportStep("WebDriver Exception has Occurred","fail");
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
-			//System.out.println("Exception has Occurred");
-			reportStep("Exception has Occurred","fail");
+			System.out.println("Exception has Occurred");
+			//reportStep("Exception has Occurred","fail");
 			throw new RuntimeException();
 			
 		}
@@ -222,12 +223,13 @@ public class SeMethods extends Reporter implements WdMethods{
 		 try {
 			Select dd = new Select(ele);
 			 dd.selectByValue(value);
-			 //System.out.println("Value selected from dropdown");
-			 reportStep("Value selected from dropdown","pass");
+			 System.out.println("Value selected from dropdown");
+			 //reportStep("Value selected from dropdown","pass");
 			 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			reportStep("Exception has Occurred","fail");
+			//reportStep("Exception has Occurred","fail");
+			System.out.println("Exception has Occurred");
 		}
 		 finally
 		 {
@@ -241,17 +243,17 @@ public class SeMethods extends Reporter implements WdMethods{
 		try {
 			Select dd = new Select(ele);
 			dd.selectByIndex(index);
-			//System.out.println("The value Slected in the Element is " + index);
-			reportStep("The value Slected in the Element is " + index,"pass");
+			System.out.println("The value Slected in the Element is " + index);
+			//reportStep("The value Slected in the Element is " + index,"pass");
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
-			//System.out.println("WebDriver Exception has Occurred");
-			reportStep("WebDriver Exception has Occurred","fail");
+			System.out.println("WebDriver Exception has Occurred");
+			//reportStep("WebDriver Exception has Occurred","fail");
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
-			//System.out.println("Exception has Occurred");
-			reportStep("Exception has Occurred","fail");
+			System.out.println("Exception has Occurred");
+			//reportStep("Exception has Occurred","fail");
 			throw new RuntimeException();
 			
 		}
@@ -265,22 +267,22 @@ public class SeMethods extends Reporter implements WdMethods{
 		boolean bReturn = false;
 		try {
 			if (driver.getTitle().equals(expectedTitle)) {
-				//System.out.println("Expected Title is matched Successfully");
-				reportStep("Expected Title is matched Successfully","pass");
+				System.out.println("Expected Title is matched Successfully");
+				//reportStep("Expected Title is matched Successfully","pass");
 				bReturn = true;
 			} else {
-				//System.out.println("Expected Title is Not Matched");
-				reportStep("Expected Title is Not Matched","pass");
+				System.out.println("Expected Title is Not Matched");
+				//reportStep("Expected Title is Not Matched","pass");
 			}
 		} catch (WebDriverException e) {
 			// TODO Auto-generated catch block
-			//System.out.println("WebDriver Exception has Occurred");
-			reportStep("WebDriver Exception has Occurred","fail");
+			System.out.println("WebDriver Exception has Occurred");
+			//reportStep("WebDriver Exception has Occurred","fail");
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
-			//System.out.println("Exception has Occurred");
-			reportStep("Exception has Occurred","fail");
+			 System.out.println("Exception has Occurred");
+			//reportStep("Exception has Occurred","fail");
 			throw new RuntimeException();
 			
 		}
